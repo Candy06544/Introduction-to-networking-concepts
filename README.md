@@ -12,19 +12,7 @@ Networking is important  for modern communication, enabling devices to share dat
 The **OSI (Open Systems Interconnection) Model** is a conceptual framework that standardizes the functions of a communication system into seven layers. Each layer has a specific role in processing data for network transmission.
 
 ### Layers of the OSI Model
-s2. Private IP Addresses
-A private IP address is used within a local area network (LAN) and is not accessible directly over the internet. These addresses are used for communication within private networks, like homes or businesses.
 
-Characteristics of Private IP Addresses:
-Not Globally Unique: Devices on different private networks can have the same private IP.
-Defined Ranges: Private IPs fall within these ranges:
-10.0.0.0 to 10.255.255.255 (Class A)
-172.16.0.0 to 172.31.255.255 (Class B)
-192.168.0.0 to 192.168.255.255 (Class C)
-Cannot Access the Internet Directly: Requires Network Address Translation (NAT) to communicate with the internet.
-Use Case:
-Connecting devices like printers, computers, and smartphones within a home or office network.
-Ensuring security by isolating internal devices from the public internet.
 
 1. **Physical Layer**  
     -Involves connector and interface specifications as well as medium requirements.It is resposible for the following:
@@ -36,18 +24,19 @@ Ensuring security by isolating internal devices from the public internet.
     - Manages the physical equipment used for communication, like cables, connectors, and network interface cards (NICs).
    3.Specifications
     - Defines how devices physically connect, including voltage levels, timing, and data rates.
-   - Example: Transmitting raw binary data over a network.
+    - Example: Transmitting raw binary data over a network.
 
 2. **Data Link Layer**  
    - Receives data packets thact contains receiver andsendr adresses
    - Responsible for physical addressing which refers to MAC addresses being assigned to data packets froming a frame 
    - MAC address is a 12 digit alphanumeric number embedded in the NIC card 
-   - Data link layer is embedded into the NIC as a software and provide means to transport data from one computer to onother through the local meadia e.gcopper wire,optical fibres and radio signals.
+   - Data link layer is embedded into the NIC as a software and provide means to transport data from one computer to onother through the local meadia e.gcopper wire,optical 
+    fibres and radio signals.
    - Allows upper layers of the OSI to acces the media using techinues such as framing e.g  Example: Ethernet frames.
    -Controls how data is placed and receuved from the media using techniques such as Media Acess Control and error detection.
 
 3. **Network Layer**  
-   - Recieves segments from the transport layer and is  responsible for the following 
+   - Recieves segments from the transport layer and is  responsible for the following: 
    1. Logical adressing 
    - Every computer has unique IP addresses which is a unique identifier of the computer onthe internet
    - Network layer assings Senders and receiver's  IP address to a segment forming a packet .
@@ -72,7 +61,8 @@ Ensuring security by isolating internal devices from the public internet.
    - Data is broken into small data units called segments.Each segments contains source and destionation number,port and sequence number.
    - The port number helps directs each segment to correct application while each sequence number reassemble into correct order to form the correct message.
    2. Flow control
-   - Controls the flow of data e.g a server can process dat at 100 Mbps while a phone can process data  at 10Mbps. A mobile phone with the help of the transport layer  can tell the server to slow down data transfer into 10 Mbps.
+   - Controls the flow of data e.g a server can process dat at 100 Mbps while a phone can process data  at 10Mbps. A mobile phone with the help of the transport layer  can 
+     tell the server to slow down data transfer into 10 Mbps.
    3. Error control
    - sends an aoutomatic repeat request for any missing data
    - A group of bits called checksum is added to each segment to receive and update segments.
@@ -87,7 +77,8 @@ Ensuring security by isolating internal devices from the public internet.
 
 5. **Session Layer**  
    - Responsible for establishing,managing and terminating sessions between applications .
-   - The session layer is responsible for keeping track of the session and With the help of API (application prograamming interface) e.g NetBIOS for communication  exchange. 
+   - The session layer is responsible for keeping track of the session and With the help of API (application prograamming interface) e.g NetBIOS for communication  
+     exchange. 
    - It also helps in authorization and authentication of users for certain information from the server.
    - Example: Keeping an FTP connection open.
 
@@ -99,7 +90,8 @@ Ensuring security by isolating internal devices from the public internet.
     2. Data compression 
    - Data is compressed reducing the number of bits  so that it ttavels efficiently 
     3. Encryption /Decryption
-  - Data is encrypted at the senders side and decrypted at the reciever side to enhance security .The Secure Socket Layer protocla is used for encryption and decryyption of data.  
+  - Data is encrypted at the senders side and decrypted at the reciever side to enhance security .The Secure Socket Layer protocla is used for encryption and decryyption of 
+    data.  
    - Example: Converting text to ASCII or encrypting files.
 
 7. **Application Layer**  
@@ -121,21 +113,33 @@ Ensuring security by isolating internal devices from the public internet.
 The **TCP/IP (Transmission Control Protocol/Internet Protocol) Model** is a simplified framework used in real-world networking. It consists of four layers that map loosely to the OSI model.
 
 ### Layers of the TCP/IP Model
-1. **Link Layer (Network Access)**  
+1. **Link Layer (Network Access)**
+   - Corresponds to the OSI's Physical and Data Link layers.  
+   - Handles physical transmission of data between devices.  
+   - Technologies: Ethernet, Wi-Fi, ARP (Address Resolution Protocol).
    - Handles data transfer between adjacent devices on the same network.  
    - Example: Ethernet or Wi-Fi.
 
-2. **Internet Layer**  
+3. **Internet Layer**
+   -Responsible for logical addressing and routing.  
+   - Core protocols:  
+     - **IP (Internet Protocol)**: Assigns unique addresses to devices (IPv4 and IPv6).  
+     - **ICMP (Internet Control Message Protocol)**: Handles error reporting and diagnostics.  
    - Manages logical addressing and routing.  
    - Example: IP addressing and routing.
 
-3. **Transport Layer**  
+5. **Transport Layer**
+    - Provides end-to-end communication and data integrity.  
+    - Core protocols:  
+     - **TCP (Transmission Control Protocol)**: Reliable, connection-oriented communication.  
+     - **UDP (User Datagram Protocol)**: Faster, connectionless communication for real-time applications.
    - Ensures reliable or connectionless data delivery.  
    - Example: TCP for reliable delivery, UDP for faster, connectionless communication.
 
-4. **Application Layer**  
-   - Provides services to user applications.  
-   - Example: HTTP for web browsing, DNS for domain resolution.
+7. **Application Layer**
+8. 
+   - Interfaces directly with user applications for data exchange.  
+   - Protocols: HTTP, FTP, DNS, SMTP, and others.
 
 ---
 
@@ -198,11 +202,11 @@ A private IP address is used within a local area network (LAN) and is not access
 
 -Characteristics of Private IP Addresses:
 
-Not Globally Unique: Devices on different private networks can have the same private IP.
-Defined Ranges: Private IPs fall within these ranges:
-10.0.0.0 to 10.255.255.255 (Class A)
-172.16.0.0 to 172.31.255.255 (Class B)
-192.168.0.0 to 192.168.255.255 (Class C)
+- Not Globally Unique: Devices on different private networks can have the same private IP.
+- Defined Ranges: Private IPs fall within these ranges:
+- 10.0.0.0 to 10.255.255.255 (Class A)
+- 172.16.0.0 to 172.31.255.255 (Class B)
+- 192.168.0.0 to 192.168.255.255 (Class C)
 - Cannot Access the Internet Directly: Requires Network Address Translation (NAT) to communicate with the internet.
 - Use Case:
 - Connecting devices like printers, computers, and smartphones within a home or office network.
@@ -224,14 +228,3 @@ Defined Ranges: Private IPs fall within these ranges:
 
 ---
 
-### Diagram: OSI Model vs. TCP/IP Model
-```plaintext
-OSI Model                 TCP/IP Model
-------------------------------------------------
-Application               Application
-Presentation
-Session
-Transport                 Transport
-Network                   Internet
-Data Link                 Link
-Physical
