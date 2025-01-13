@@ -36,7 +36,8 @@ The **OSI (Open Systems Interconnection) Model** is a conceptual framework that 
    -Controls how data is placed and receuved from the media using techniques such as Media Acess Control and error detection.
 
 3. **Network Layer**  
-   - Recieves segments from the transport layer and is  responsible for the following: 
+   - Recieves segments from the transport layer and is  responsible for the following:
+     
    1. Logical adressing 
    - Every computer has unique IP addresses which is a unique identifier of the computer onthe internet
    - Network layer assings Senders and receiver's  IP address to a segment forming a packet .
@@ -57,19 +58,24 @@ The **OSI (Open Systems Interconnection) Model** is a conceptual framework that 
 4. **Transport Layer**  
 
    - Offers end to end communication between end devices through a network in the following ways.
+     
    1. Segmentation
    - Data is broken into small data units called segments.Each segments contains source and destionation number,port and sequence number.
    - The port number helps directs each segment to correct application while each sequence number reassemble into correct order to form the correct message.
+     
    2. Flow control
    - Controls the flow of data e.g a server can process dat at 100 Mbps while a phone can process data  at 10Mbps. A mobile phone with the help of the transport layer  can 
      tell the server to slow down data transfer into 10 Mbps.
+     
    3. Error control
    - sends an aoutomatic repeat request for any missing data
    - A group of bits called checksum is added to each segment to receive and update segments.
+     
    4. Connection oriented  transmission 
    - This is through the Tranfer Control Protocol (TCP)
    - TCP provides feedback hence lost data can be retrieved since full data transmission is a must 
-   - TCP is mainle used in Emails ,World Wide Web 
+   - TCP is mainle used in Emails ,World Wide Web
+     
    5. connectionless Transmission
    - This is through the User Datagram Protocol (UDP)
    - Its faster than TCP but doesn't provide feedback hence not all data is recieved ,used mainle in online streaming movies and online games.
@@ -85,16 +91,20 @@ The **OSI (Open Systems Interconnection) Model** is a conceptual framework that 
 6. **Presentation Layer**  
    - Receives data from the application layer inform of  characters and numbers.
    - Data received undergoes three processes
+     
     1. Translation
-   - The data recived inform of characters and numbers is converted into binary fromat (1,0) understood by the computer. 
+   - The data recived inform of characters and numbers is converted into binary fromat (1,0) understood by the computer.
+     
     2. Data compression 
-   - Data is compressed reducing the number of bits  so that it ttavels efficiently 
+   - Data is compressed reducing the number of bits  so that it ttavels efficiently
+     
     3. Encryption /Decryption
   - Data is encrypted at the senders side and decrypted at the reciever side to enhance security .The Secure Socket Layer protocla is used for encryption and decryyption of 
     data.  
    - Example: Converting text to ASCII or encrypting files.
 
-7. **Application Layer**  
+7. **Application Layer**
+   
    - The interface between the network and the end-user applications and the layer the user interacts with.
    - Application layer provides services for network application , it also icludes protocolos that aid in the implementation of this services.
    - example :
@@ -114,6 +124,7 @@ The **TCP/IP (Transmission Control Protocol/Internet Protocol) Model** is a simp
 
 ### Layers of the TCP/IP Model
 1. **Link Layer (Network Access)**
+   
    - Corresponds to the OSI's Physical and Data Link layers.  
    - Handles physical transmission of data between devices.  
    - Technologies: Ethernet, Wi-Fi, ARP (Address Resolution Protocol).
@@ -121,6 +132,7 @@ The **TCP/IP (Transmission Control Protocol/Internet Protocol) Model** is a simp
    - Example: Ethernet or Wi-Fi.
 
 3. **Internet Layer**
+   
    -Responsible for logical addressing and routing.  
    - Core protocols:  
      - **IP (Internet Protocol)**: Assigns unique addresses to devices (IPv4 and IPv6).  
@@ -129,15 +141,18 @@ The **TCP/IP (Transmission Control Protocol/Internet Protocol) Model** is a simp
    - Example: IP addressing and routing.
 
 5. **Transport Layer**
+   
     - Provides end-to-end communication and data integrity.  
-    - Core protocols:  
+    - Core protocols:
+      
      - **TCP (Transmission Control Protocol)**: Reliable, connection-oriented communication.  
-     - **UDP (User Datagram Protocol)**: Faster, connectionless communication for real-time applications.
+     - **UDP (User Datagram Protocol)**: Faster, connectionless communication for real-time applicationS
+       
    - Ensures reliable or connectionless data delivery.  
    - Example: TCP for reliable delivery, UDP for faster, connectionless communication.
 
 7. **Application Layer**
-8. 
+   
    - Interfaces directly with user applications for data exchange.  
    - Protocols: HTTP, FTP, DNS, SMTP, and others.
 
